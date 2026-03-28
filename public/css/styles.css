@@ -138,13 +138,12 @@ body {
 .bg {
     display: flex;
     align-items: center;
-    background-image: linear-gradient(rgba(14, 49, 91, 0.15), rgba(209, 167, 70, 0.15)), url('../assets/hero-chair.jpg');
+    background-image: linear-gradient(rgba(14, 49, 91, 0.15) 70%, rgba(255, 255, 255, 0.8) 100%), url('../assets/hero-chair-fade.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 400px;
-    height: 90vh;
-    box-shadow: 0 6px 24px rgba(30,91,168,0.08);
+    height: 100vh;
 }
 
 .main-content {
@@ -228,4 +227,35 @@ body {
     background: var(--primary-hover);
     color: var(--gold-accent);
     box-shadow: 0 4px 16px var(--button-shadow);
+}
+
+#services {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--white-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+ul{
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+li {
+    list-style: none;
+    background-color: var(--light-gray);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 12px;
+}
+
+li:hover {
+    background-color: var(--light-blue);
+    box-shadow: 0 4px 12px var(--button-shadow);
 }

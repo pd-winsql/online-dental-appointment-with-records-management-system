@@ -28,9 +28,6 @@
                     <div class="cta">
                         <a href="" class="btn btn-primary">Book an Appointment</a>
                     </div>
-                    <!-- <div class="hero-image">
-                        <img src="public/assets/hero-chair.jpg" alt="Smiling family at the dentist">
-                    </div>-->
                 </div>
             </section>
         </main>

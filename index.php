@@ -11,10 +11,10 @@
         <div class="nav-container">
             <img src="public/assets/logo.png" alt="Dr. Aprille Ventura Clinica Dental Logo" class="logo">
             <ul class="nav-menu">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#hero-section" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -94,12 +94,25 @@
             </div>
         </section>
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Address: 123 Smile Street, Dental City, DC 12345</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email:
-                <a href="mailto:info@draprilleventura.com">info@draprilleventura.com</a>
-            </p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch with Us</h2>
+                    <p>Address: 123 Smile Street, Dental City, DC 12345</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email:
+                        <a href="mailto:info@draprilleventura.com">info@draprilleventura.com</a>
+                    </p>
+                </div>
+                <form action="mailto:info@draprilleventura.com" method="POST" enctype="text/plain" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">

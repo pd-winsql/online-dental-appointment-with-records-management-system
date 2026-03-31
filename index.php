@@ -16,6 +16,9 @@
                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-login">
+                <a href="login.php" class="btn-login">Login</a>
+            </div>
         </div>
     </nav>
     <div class="bg">

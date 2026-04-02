@@ -30,7 +30,7 @@
                         <p>Your smile is our priority. We provide comprehensive dental care for the whole family.</p>
                     </div>
                     <div class="cta">
-                        <button class="btn btn-primary" onclick="openModal('myModal')">Book an Appointment</button>
+                        <a href="apps/views/appointment.php" class="btn btn-primary" >Book an Appointment</a>
                     </div>
                 </div>
             </section>

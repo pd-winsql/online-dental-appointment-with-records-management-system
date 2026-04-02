@@ -599,3 +599,64 @@ body {
 .login-form .btn-primary:hover {
     background-color: var(--primary-hover);
 }
+
+/* Appointment Section */
+#appointment-section {
+    padding: var(--spacing-xxl) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.appointment-form {
+    background: var(--white-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--button-shadow);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 800px;
+}
+
+.appointment-form h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.appointment-form .form-row {
+    display: flex;
+    gap: var(--spacing-md);
+    width: auto;
+}
+
+.suffix {
+    max-width: 100px;
+}
+
+.gender-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-left: var(--spacing-md);
+}
+
+.gender-options input[type="radio"] {
+    margin-right: var(--spacing-xs);
+    width: 10px;
+}
+
+.gender-options label {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-top: 2px;
+}

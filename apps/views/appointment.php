@@ -70,9 +70,32 @@
                     <label for="date">Preferred Date:</label>
                     <input type="date" id="date" name="date" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Book Appointment</button>
+                <button type="submit" class="btn btn-primary" onclick="openModal('appointmentModal')">Book Appointment</button>
             </form>
         </section>
     </main>
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('appointmentModal')">&times;</span>
+            <h2>Appointment Booked Successfully!</h2>
+            <p>Thank you for booking an appointment with us. We will contact you shortly to confirm the details.</p>
+            <p>Do you want to create an account to manage your appointments and dental records?</p>
+            <button class="btn btn-secondary" onclick="openModal('registerModal'); closeModal('appointmentModal')">Yes, Create Account</button>
+        </div>
+    </div>
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+        // Close when clicking backdrop
+        document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) closeModal(this.id);
+        });
+        });
+    </script>
 </body>
 </html>

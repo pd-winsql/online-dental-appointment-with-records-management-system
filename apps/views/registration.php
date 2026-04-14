@@ -92,7 +92,8 @@
                 </div>
             </div>
         </div>
-        <div class="registration-container">
+
+        <div class="registration-container guardian-info" style="display: none;">
             <h2>Guardian Information</h2>
             <div class="form-row">
                 <div class="form-group">
@@ -328,6 +329,31 @@ function setupConditionalInputs() {
         }
     });
 }
+
+
+function guardianInfoToggle() {
+    const ageInput = document.getElementById('age');
+    const guardianInfo = document.querySelector('.guardian-info');
+    ageInput.addEventListener('input', function() {
+        if (parseInt(ageInput.value) >= 18) {
+            guardianInfo.style.display = 'block';
+        } else {
+            guardianInfo.style.display = 'none';
+        }
+    });
+}
+
+
+function ageNoNegative() {
+    const ageInput = document.getElementById('age');
+    ageInput.addEventListener('input', function() {
+        if (ageInput.value < 0) {
+            ageInput.value = '';
+        }
+    });
+}
 window.addEventListener('DOMContentLoaded', setupConditionalInputs);
+window.addEventListener('DOMContentLoaded', guardianInfoToggle);
+window.addEventListener('DOMContentLoaded', ageNoNegative);
 </script>
 </html>

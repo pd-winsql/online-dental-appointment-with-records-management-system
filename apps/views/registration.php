@@ -135,10 +135,15 @@
                     </div>
                 </div>
             </div>
-            //TODO: add "If yes, specify" then add a field for input
             <div class="form-row">
                 <div class="form-group question-group">
+                    <div class="q-label">
                     <label for="q2">Are you under medical condition right now?</label>
+                        <div class="specify-input" id="q2-specify" style="display:none;">
+                            <label for="q2_specify">If yes, specify:</label>
+                            <input type="text" id="q2_specify" name="q2_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q2-yes" name="q2" value="yes" required>
                         <label for="q2-yes">Yes</label>
@@ -147,10 +152,15 @@
                     </div>
                 </div>
             </div>
-            //TODO: add "If yes, specify" then add a field for input
             <div class="form-row">
                 <div class="form-group question-group">
-                    <label for="q3">Have you ever had serious illness or surgical operation?</label>
+                    <div class="q-label">
+                        <label for="q3">Have you ever had serious illness or surgical operation?</label>
+                        <div class="specify-input" id="q3-specify" style="display:none;">
+                            <label for="q3_specify">If yes, specify:</label>
+                            <input type="text" id="q3_specify" name="q3_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q3-yes" name="q3" value="yes" required>
                         <label for="q3-yes">Yes</label>
@@ -159,28 +169,40 @@
                     </div>
                 </div>
             </div>
-            //TODO: add "If yes, specify" then add a field for input
             <div class="form-row">
                 <div class="form-group question-group">
+                    <div class="q-label">
                     <label for="q4">Have you ever been hospitalized?</label>
+                        <div class="specify-input" id="q4-specify" style="display:none;">
+                            <label for="q4_specify">If yes, specify:</label>
+                            <input type="text" id="q4_specify" name="q4_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q4-yes" name="q4" value="yes" required>
                         <label for="q4-yes">Yes</label>
                         <input type="radio" id="q4-no" name="q4" value="no" required>
                         <label for="q4-no">No</label>
                     </div>
+                        
                 </div>
             </div>
-            //TODO: add "If yes, specify" then add a field for input
             <div class="form-row">
                 <div class="form-group question-group">
+                    <div class="q-label">
                     <label for="q5">Are you taking any medication?</label>
+                        <div class="specify-input" id="q5-specify" style="display:none;">
+                            <label for="q5_specify">If yes, specify:</label>
+                            <input type="text" id="q5_specify" name="q5_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q5-yes" name="q5" value="yes" required>
                         <label for="q5-yes">Yes</label>
                         <input type="radio" id="q5-no" name="q5" value="no" required>
                         <label for="q5-no">No</label>
                     </div>
+                        
                 </div>
             </div>
             <div class="form-row">
@@ -207,7 +229,13 @@
             </div>
             <div class="form-row">
                 <div class="form-group question-group">
+                    <div class="q-label">
                     <label for="q8">Do you use drugs?</label>
+                        <div class="specify-input" id="q8-specify" style="display:none;">
+                            <label for="q8_specify">If yes, specify:</label>
+                            <input type="text" id="q8_specify" name="q8_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q8-yes" name="q8" value="yes" required>
                         <label for="q8-yes">Yes</label>
@@ -216,10 +244,15 @@
                     </div>
                 </div>
             </div>
-            //TODO: add a field for input in others
             <div class="form-row">
                 <div class="form-group question-group">
+                    <div class="q-label">
                     <label for="q9">Are you allergic to any of the ff; Local Anesthetics, Latex, Penicillin, Aspirin Others:</label>
+                        <div class="specify-input" id="q9-specify" style="display:none;">
+                            <label for="q9_specify">If yes, specify:</label>
+                            <input type="text" id="q9_specify" name="q9_specify">
+                        </div>
+                    </div>
                     <div class="radio">
                         <input type="radio" id="q9-yes" name="q9" value="yes" required>
                         <label for="q9-yes">Yes</label>
@@ -263,8 +296,38 @@
                 </div>
             </div>
         </div>
-        //Todo: continue the form with the following conditions
-        //Todo: Create a digital contract form for the patient to sign before submitting the registration form
+        <!--Todo: continue the form with the following conditions-->
+        <!--Todo: Create a digital contract form for the patient to sign before submitting the registration form-->
     </section>
 </body>
+<script>
+// Show/hide specify input fields based on radio selection
+function setupConditionalInputs() {
+    const questions = [1,2,3,4,5,8,9];
+    questions.forEach(function(q) {
+        const yesRadio = document.getElementById(`q${q}-yes`);
+        const noRadio = document.getElementById(`q${q}-no`);
+        const specifyDiv = document.getElementById(`q${q}-specify`);
+        if (yesRadio && noRadio && specifyDiv) {
+            yesRadio.addEventListener('change', function() {
+                if (yesRadio.checked) {
+                    specifyDiv.style.display = 'block';
+                }
+            });
+            noRadio.addEventListener('change', function() {
+                if (noRadio.checked) {
+                    specifyDiv.style.display = 'none';
+                }
+            });
+            // On page load, hide if not yes
+            if (!yesRadio.checked) {
+                specifyDiv.style.display = 'none';
+            } else {
+                specifyDiv.style.display = 'block';
+            }
+        }
+    });
+}
+window.addEventListener('DOMContentLoaded', setupConditionalInputs);
+</script>
 </html>

@@ -200,7 +200,6 @@ body {
     align-items: center;
     flex-direction: column;
     gap: var(--spacing-lg);
-
     background: rgba(255, 255, 255, 0.025);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -573,7 +572,6 @@ body {
 }
 
 .form-group label {
-    display: block;
     margin-bottom: var(--spacing-sm);
     color: var(--text-light);
 }
@@ -810,4 +808,30 @@ body {
 .radio label {
     color: var(--text-light);
     font-size: 1.1rem;
+}
+
+.specify-input {
+    display: flex;
+    flex-direction: row;        
+    align-items: center;
+    gap: 4px;
+    margin-left: 16px;
+}
+.specify-input label {
+    margin-bottom: 0;
+    margin-right: 4px;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+.specify-input input[type="text"] {
+    width: 180px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    padding: 4px 8px;
+}
+
+.q-label {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }

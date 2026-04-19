@@ -302,6 +302,7 @@
     </section>
 </body>
 <script>
+
 // Show/hide specify input fields based on radio selection
 function setupConditionalInputs() {
     const questions = [1,2,3,4,5,8,9];
@@ -344,7 +345,7 @@ function guardianInfoToggle() {
 }
 
 
-function ageNoNegative() {
+function noNegativeAge() {
     const ageInput = document.getElementById('age');
     ageInput.addEventListener('input', function() {
         if (ageInput.value < 0) {
@@ -352,8 +353,9 @@ function ageNoNegative() {
         }
     });
 }
+
 window.addEventListener('DOMContentLoaded', setupConditionalInputs);
 window.addEventListener('DOMContentLoaded', guardianInfoToggle);
-window.addEventListener('DOMContentLoaded', ageNoNegative);
+window.addEventListener('DOMContentLoaded', noNegativeAge);
 </script>
 </html>

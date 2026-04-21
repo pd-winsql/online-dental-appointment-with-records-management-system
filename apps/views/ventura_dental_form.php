@@ -323,11 +323,11 @@
       <p>I, <input class="consent-name" type="text" name="consentName" placeholder="Full Name" required>, do hereby consent to the performance upon:</p>
 
       <div class="consent-checkboxes">
-        <label><input type="checkbox" name="consentFor" value="myself"> Myself</label>
-        <label><input type="checkbox" name="consentFor" value="spouse"> Spouse</label>
-        <label><input type="checkbox" name="consentFor" value="son"> Son</label>
-        <label><input type="checkbox" name="consentFor" value="daughter"> Daughter</label>
-        <label><input type="checkbox" name="consentFor" value="others"> Others</label>
+        <label><input type="checkbox" name="consentFor" onclick="onlyOne(this)" value="myself"> Myself</label>
+        <label><input type="checkbox" name="consentFor" onclick="onlyOne(this)" value="spouse"> Spouse</label>
+        <label><input type="checkbox" name="consentFor" onclick="onlyOne(this)" value="son"> Son</label>
+        <label><input type="checkbox" name="consentFor" onclick="onlyOne(this)" value="daughter"> Daughter</label>
+        <label><input type="checkbox" name="consentFor" onclick="onlyOne(this)" value="others"> Others</label>
       </div>
 
       <p>of all dental procedures, operations and/or treatment that may be considered necessary to restore my/his/her oral and dental health.</p>
@@ -425,6 +425,14 @@
         }
       });
     });
+  }
+
+  //checkbox for consent form
+  function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('consentFor');
+    checkboxes.forEach((item) => {
+      if(item !== checkbox) item.checked = false;
+    })
   }
 
   window.addEventListener('DOMContentLoaded', function() {

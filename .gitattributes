@@ -1,10 +1,11 @@
 # Enforce LF endings for PHP source files
-*.php text eol=lf
+*.php text eol=crlf
 
 # Enforce LF endings for other code files
-*.js  text eol=lf
-*.css text eol=lf
-*.html text eol=lf
+*.js  text eol=crlf
+*.css text eol=crlf
+*.html text eol=crlf
+*.php text eol=crlf
 
 # Keep binary files untouched
 *.png binary

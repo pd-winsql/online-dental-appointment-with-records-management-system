@@ -122,24 +122,15 @@ body {
 
 
 .btn-login {
-    background-color: var(--gold);
-    color: #fff;
     padding: 8px var(--spacing-lg);
     border: none;
     border-radius: 6px;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    box-shadow: 0 2px 8px var(--button-shadow);
     cursor: pointer;
     font-size: 1rem;
     margin-left: 10px;
     display: inline-block;
-}
-
-.btn-login:hover {
-    background-color: var(--primary-hover);
-    color: var(--gold-light);
 }
 
 .nav-item{
@@ -640,7 +631,7 @@ label {
     color: var(--dark);
 }
 
-.btn-primary, button[type="submit"] {
+.btn-primary, button[type="submit"], .btn-login {
     font-family: 'Jost', sans-serif;
     font-size: 10px;
     font-weight: 500;
@@ -655,10 +646,10 @@ label {
     transition: background 0.2s, transform 0.15s;
     justify-self: center;
     display: block;
-    margin:  20px auto 0 auto;
+    margin:  auto 0 auto;
 }
 
-.btn-primary:hover, button[type="submit"]:hover {
+.btn-primary:hover, button[type="submit"]:hover, .btn-login:hover {
     background: var(--dark);
     transform: translateY(-1px);
 }

@@ -82,16 +82,16 @@
                     <img src="public/assets/logo.png" alt="Clinic 1" class="clinic-image">
                     <div class="clinic-info">
                         <h3>Clinic 1</h3>
-                        <p>123 Smile Street, Dental City, DC 12345</p>
-                        <p>Phone: (123) 456-7890</p>
+                        <p>Bartolome St, Tuguegarao City, Cagayan</p>
+                        <p>Phone: 0912-345-6789</p>
                     </div>
                 </div>
                 <div class="clinic-card">
                     <img src="public/assets/logo.png" alt="Clinic 2" class="clinic-image">
                     <div class="clinic-info">
                         <h3>Clinic 2</h3>
-                        <p>456 Tooth Avenue, Dental Town, DT 67890</p>
-                        <p>Phone: (987) 654-3210</p>
+                        <p>WJ5R+997, Road, Alcala, Cagayan</p>
+                        <p>Phone: 0912-345-6789</p>
                     </div>
                 </div>
             </div>
@@ -100,10 +100,10 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h2>Get in Touch with Us</h2>
-                    <p>Address: 123 Smile Street, Dental City, DC 12345</p>
-                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: </p>
+                    <p>Phone: 0912-345-6789</p>
                     <p>Email:
-                        <a href="mailto:info@draprilleventura.com">info@draprilleventura.com</a>
+                        <a href="mailto:info@draprilleventura.com">walapa@gmail.com</a>
                     </p>
                 </div>
                 <form action="mailto:info@draprilleventura.com" method="POST" enctype="text/plain" class="contact-form">

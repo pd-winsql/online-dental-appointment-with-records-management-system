@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="page">
+<div class="page">
     <form action="registration-form.php" method="POST" class="login-form">
         <img src="../../public/assets/logo.png" alt="Logo" class="logo">
         <h2 class="section-title">Account Registration</h2>
@@ -37,6 +37,7 @@
         <a href="apps/views/ventura_dental_form.php" onclick="closeModal('myModal');">Login</a>
         </div>
     </form>
-    </div>
+</div>
+
 </body>
 </html>

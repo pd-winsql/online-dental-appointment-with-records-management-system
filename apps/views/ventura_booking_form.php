@@ -176,9 +176,9 @@
       <!-- ACTIONS -->
       <div class="submit-row">
         <button type="button" class="btn-secondary" onclick="clearForm()">Clear Form</button>
-        <button type="submit" class="btn-primary">Request Appointment</button>
-      </div>
-
+        <button type="submit" class="btn-primary" onclick="handleSubmit(event)">Request Appointment</button>
+      </div> 
+<!-- onclick must be remove, this is for temporary testing only -->
     </form>
   </div>
 
@@ -219,6 +219,7 @@
 
   function handleSubmit(e) {
     e.preventDefault();
+    alert('test');
     showModal();
   }
 

@@ -654,6 +654,10 @@ label {
     transform: translateY(-1px);
 }
 
+.page .btn-primary {
+    margin-top: var(--spacing-lg);
+}
+
 @media (max-width: 640px) {
     .modal-content,
     .page {

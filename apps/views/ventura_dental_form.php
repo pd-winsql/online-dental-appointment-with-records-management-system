@@ -351,7 +351,9 @@
     </div>
 
     <div class="submit-row">
-      <button type="submit">Submit Patient Form</button>
+      <button type="submit" onclick="handleSubmit(event)">Submit Patient Form</button>
+<!--<button type="submit">Submit Patient Form</button> -->
+<!--onclick - this executes and may bypass validation checks.-->
     </div>
 
   </form>
@@ -360,7 +362,8 @@
 <script>
   function handleSubmit(e) {
     e.preventDefault();
-    alert('Form submitted successfully! Please present this to the clinic staff.');
+    alert('Form submitted successfully!');
+    window.location.href = "registration-form.php";
   }
 
   function showMinorBoxAndAge() {
